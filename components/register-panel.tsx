@@ -6,6 +6,7 @@ import { useAccount, useReadContract, useWaitForTransactionReceipt, useWriteCont
 import { baseBadgeRegisterAbi, baseBadgeRegisterAddress } from "@/lib/contracts/baseBadgeRegister";
 import { normalizeBadgeName } from "@/lib/format";
 import { isMockBadgeAvailable } from "@/lib/mock-registry";
+import { builderCodeConfig } from "@/lib/wagmi";
 import { BadgeStatusChip } from "@/components/badge-status-chip";
 import { BadgeNameField } from "@/components/badge-name-field";
 import { WalletButton } from "@/components/wallet-button";
@@ -44,6 +45,7 @@ export function RegisterPanel() {
         address: baseBadgeRegisterAddress,
         functionName: "set",
         args: [normalizedName],
+        dataSuffix: builderCodeConfig.dataSuffix,
       });
 
       setStatusText("Transaction sent. Waiting for Base confirmation.");

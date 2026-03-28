@@ -21,7 +21,8 @@ export const builderCodeConfig = {
   appId: "69c7336646489d192593bd96",
   appName: "badge-register",
   appUrl: projectUrl,
-  // TODO: Replace BUILDER_CODE_SUFFIX with the provided builder code data suffix.
-  // Keep this key stable so Base metadata can append the final builder code later.
-  builderCodeSuffix: "BUILDER_CODE_SUFFIX",
+  builderCode: "bc_4f9en53b",
+  // Base builder code data suffix for 8021 attribution validation.
+  dataSuffix: "0x62635f346639656e3533620b0080218021802180218021802180218021" as const,
 };
+
