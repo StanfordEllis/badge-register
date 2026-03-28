@@ -9,6 +9,7 @@ import { isMockBadgeAvailable } from "@/lib/mock-registry";
 import { builderCodeConfig } from "@/lib/wagmi";
 import { BadgeStatusChip } from "@/components/badge-status-chip";
 import { BadgeNameField } from "@/components/badge-name-field";
+import { RegistrySignalPanel } from "@/components/registry-signal-panel";
 import { WalletButton } from "@/components/wallet-button";
 import { trackTransaction } from "@/utils/track";
 
@@ -146,6 +147,26 @@ export function RegisterPanel() {
             </Link>
           </div>
         </div>
+
+        <RegistrySignalPanel
+          title="Onchain Signals"
+          items={[
+            { label: "Contract Read", value: badgeRead.data ? "Owner badge loaded" : "Awaiting read", tone: "accent" },
+            { label: "Write Mode", value: "set(string)" },
+            { label: "Receipt", value: receipt.isSuccess ? "Confirmed" : receipt.isLoading ? "Pending" : "Standby" },
+            { label: "Network", value: "Base" },
+          ]}
+        />
+
+        <RegistrySignalPanel
+          title="Offchain Signals"
+          items={[
+            { label: "Builder Code", value: builderCodeConfig.builderCode, tone: "accent" },
+            { label: "8021 Suffix", value: "Attached" },
+            { label: "Tracking API", value: "Enabled" },
+            { label: "Registry UI", value: "Synced" },
+          ]}
+        />
 
         <div style={{ display: "grid", gap: 10 }}>
           <p className="section-title">Flow Status</p>

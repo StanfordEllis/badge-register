@@ -1,7 +1,9 @@
 import { BottomNav } from "@/components/bottom-nav";
 import { BadgeStatusChip } from "@/components/badge-status-chip";
 import { RegistryHeader } from "@/components/registry-header";
+import { RegistrySignalPanel } from "@/components/registry-signal-panel";
 import { getRegistryTimeline } from "@/lib/mock-registry";
+import { builderCodeConfig } from "@/lib/wagmi";
 
 export default function StatusPage() {
   const timeline = getRegistryTimeline();
@@ -12,7 +14,27 @@ export default function StatusPage() {
         <RegistryHeader
           eyebrow="System Status"
           title="Registry State"
-          description="Track registration readiness, onchain write flow, and badge lookup states."
+          description="Track registration readiness, onchain write flow, and offchain attribution states."
+        />
+
+        <RegistrySignalPanel
+          title="Onchain State"
+          items={[
+            { label: "Network", value: "Base", tone: "accent" },
+            { label: "Contract", value: "Reachable" },
+            { label: "Write Method", value: "set(string)" },
+            { label: "Owner Read", value: "badge(address)" },
+          ]}
+        />
+
+        <RegistrySignalPanel
+          title="Offchain State"
+          items={[
+            { label: "App ID", value: builderCodeConfig.appId, tone: "accent" },
+            { label: "Builder", value: builderCodeConfig.builderCode },
+            { label: "8021", value: "Attached" },
+            { label: "Tracking", value: "Ready" },
+          ]}
         />
 
         <section className="panel" style={{ borderRadius: 26, padding: 18, display: "grid", gap: 12 }}>

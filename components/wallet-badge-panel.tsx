@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useAccount, useReadContract } from "wagmi";
 import { baseBadgeRegisterAbi, baseBadgeRegisterAddress } from "@/lib/contracts/baseBadgeRegister";
 import { getBadgeRecordByOwner } from "@/lib/mock-registry";
+import { RegistrySignalPanel } from "@/components/registry-signal-panel";
 import { WalletButton } from "@/components/wallet-button";
 import { BadgeStatusChip } from "@/components/badge-status-chip";
 import { shortenAddress } from "@/lib/format";
+import { builderCodeConfig } from "@/lib/wagmi";
 
 export function WalletBadgePanel() {
   const { address } = useAccount();
@@ -49,6 +51,26 @@ export function WalletBadgePanel() {
           <span className="subtle">{badgeName ? "Wallet badge record loaded." : "Connect and register to create a record."}</span>
         </div>
       </div>
+
+      <RegistrySignalPanel
+        title="Onchain View"
+        items={[
+          { label: "Record Read", value: badgeName ? "Resolved" : "Empty", tone: "accent" },
+          { label: "Address Link", value: address ? "Connected" : "Offline" },
+          { label: "Contract", value: "BaseBadgeRegister" },
+          { label: "Method", value: "badge(address)" },
+        ]}
+      />
+
+      <RegistrySignalPanel
+        title="Offchain View"
+        items={[
+          { label: "App ID", value: builderCodeConfig.appId, tone: "accent" },
+          { label: "Builder", value: builderCodeConfig.builderCode },
+          { label: "Registry Cache", value: mockRecord ? "Warm" : "Standby" },
+          { label: "Attribution", value: "Prepared" },
+        ]}
+      />
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
         <Link href="/register" className="system-button primary" style={{ display: "grid", placeItems: "center" }}>

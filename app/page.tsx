@@ -2,10 +2,12 @@ import Link from "next/link";
 import { BottomNav } from "@/components/bottom-nav";
 import { RegistryHeader } from "@/components/registry-header";
 import { RegistrySummaryPanel } from "@/components/registry-summary-panel";
+import { RegistrySignalPanel } from "@/components/registry-signal-panel";
 import { WalletButton } from "@/components/wallet-button";
 import { getFeaturedBadgeRecord, getRegistrySnapshot } from "@/lib/mock-registry";
 import { BadgeRecordCard } from "@/components/badge-record-card";
 import { BadgeStatusChip } from "@/components/badge-status-chip";
+import { builderCodeConfig } from "@/lib/wagmi";
 
 export default function HomePage() {
   const snapshot = getRegistrySnapshot();
@@ -60,6 +62,27 @@ export default function HomePage() {
         </section>
 
         <RegistrySummaryPanel snapshot={snapshot} />
+
+        <div style={{ display: "grid", gap: 12 }}>
+          <RegistrySignalPanel
+            title="Onchain Layer"
+            items={[
+              { label: "Contract", value: "Live on Base", tone: "accent" },
+              { label: "Write Path", value: "set(string)" },
+              { label: "Lookup", value: "badge(address)" },
+              { label: "Receipt Mode", value: "Tracked" },
+            ]}
+          />
+          <RegistrySignalPanel
+            title="Offchain Layer"
+            items={[
+              { label: "App ID", value: builderCodeConfig.appId, tone: "accent" },
+              { label: "Builder Code", value: builderCodeConfig.builderCode },
+              { label: "Attribution", value: "8021 suffix active" },
+              { label: "Dashboard Track", value: "Enabled" },
+            ]}
+          />
+        </div>
       </div>
 
       <BottomNav />
