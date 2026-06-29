@@ -127,3 +127,13 @@ git commit -m "Describe your change"
 The exact structure depends on the files present in the repository.
 
 Common areas to look for include:
+
+- Application source files
+- Configuration files
+- Static assets
+- Build or development scripts
+- Documentation
+
+## Configuration
+
+If the project requires environment variables, create a local environment file based on the repository conventions.
