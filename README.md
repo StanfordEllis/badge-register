@@ -78,3 +78,12 @@ Common examples include:
 
 ```bash
 npm run dev
+```
+
+or:
+
+```bash
+npm start
+```
+
+Use the command that matches the scripts defined in the repository.
