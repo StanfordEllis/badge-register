@@ -148,3 +148,12 @@ or:
 
 ```bash
 .env.local
+```
+
+Do not commit local configuration files that contain private values.
+
+## Testing
+
+If test scripts are available, run them through the project package manager.
+
+For npm:
