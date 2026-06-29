@@ -57,3 +57,13 @@ For pnpm:
 ```bash
 pnpm install
 ```
+
+For yarn:
+
+```bash
+yarn install
+```
+
+## Running Locally
+
+After installing dependencies, check the available scripts:
