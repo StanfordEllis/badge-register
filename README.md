@@ -87,3 +87,14 @@ npm start
 ```
 
 Use the command that matches the scripts defined in the repository.
+
+## Usage
+
+Use this project as the starting point for the badge registration mini app.
+
+A typical development flow is:
+
+1. Clone the repository.
+2. Install dependencies.
+3. Start the local development server.
+4. Open the local app in a browser.
