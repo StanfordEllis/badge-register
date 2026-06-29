@@ -47,3 +47,13 @@ ls
 If a `package.json` file is present, install dependencies using the package manager used by the project.
 
 For npm:
+
+```bash
+npm install
+```
+
+For pnpm:
+
+```bash
+pnpm install
+```
