@@ -98,3 +98,13 @@ A typical development flow is:
 2. Install dependencies.
 3. Start the local development server.
 4. Open the local app in a browser.
+5. Test the badge registration flow.
+6. Make changes and verify the behavior locally.
+
+## Suggested Development Workflow
+
+Create a new branch before making changes:
+
+```bash
+git checkout -b feature/your-change
+```
