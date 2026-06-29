@@ -118,3 +118,12 @@ git diff
 Commit your changes with a clear message:
 
 ```bash
+git add .
+git commit -m "Describe your change"
+```
+
+## Repository Structure
+
+The exact structure depends on the files present in the repository.
+
+Common areas to look for include:
