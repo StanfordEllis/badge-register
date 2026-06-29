@@ -67,3 +67,14 @@ yarn install
 ## Running Locally
 
 After installing dependencies, check the available scripts:
+
+```bash
+npm run
+```
+
+Then run the appropriate development command.
+
+Common examples include:
+
+```bash
+npm run dev
