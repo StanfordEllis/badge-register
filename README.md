@@ -177,3 +177,14 @@ The exact output location and build behavior depend on the project configuration
 ## Deployment
 
 Deployment steps are not defined in the original project description.
+
+Before deploying, confirm:
+
+- The app builds successfully.
+- Required configuration values are documented.
+- Local behavior has been tested.
+- Any Base-specific integration details are verified.
+
+## Notes
+
+- Keep the badge registration flow simple and easy to understand.
