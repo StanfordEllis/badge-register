@@ -188,3 +188,13 @@ Before deploying, confirm:
 ## Notes
 
 - Keep the badge registration flow simple and easy to understand.
+- Document new setup steps as they are added.
+- Avoid committing local secrets or private configuration.
+- Keep changes small and easy to review.
+- Update this README when the project structure or workflow changes.
+
+## License
+
+No license information was provided in the original project description.
+
+Add a license file if the project is intended for public reuse.
