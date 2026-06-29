@@ -108,3 +108,13 @@ Create a new branch before making changes:
 ```bash
 git checkout -b feature/your-change
 ```
+
+Make your edits, then review the diff:
+
+```bash
+git diff
+```
+
+Commit your changes with a clear message:
+
+```bash
