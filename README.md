@@ -37,3 +37,13 @@ Move into the project directory:
 ```bash
 cd badge-register
 ```
+
+Inspect the project files to determine the package manager and framework in use:
+
+```bash
+ls
+```
+
+If a `package.json` file is present, install dependencies using the package manager used by the project.
+
+For npm:
