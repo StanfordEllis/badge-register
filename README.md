@@ -27,3 +27,13 @@ The original project description is brief, so this document avoids making assump
 ## Getting Started
 
 Clone the repository:
+
+```bash
+git clone https://github.com/StanfordEllis/badge-register.git
+```
+
+Move into the project directory:
+
+```bash
+cd badge-register
+```
