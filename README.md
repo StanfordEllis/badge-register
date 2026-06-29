@@ -157,3 +157,13 @@ Do not commit local configuration files that contain private values.
 If test scripts are available, run them through the project package manager.
 
 For npm:
+
+```bash
+npm test
+```
+
+If no test script is defined yet, add tests alongside future feature work.
+
+## Building
+
+If a build script is available, run:
