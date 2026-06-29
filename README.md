@@ -167,3 +167,13 @@ If no test script is defined yet, add tests alongside future feature work.
 ## Building
 
 If a build script is available, run:
+
+```bash
+npm run build
+```
+
+The exact output location and build behavior depend on the project configuration.
+
+## Deployment
+
+Deployment steps are not defined in the original project description.
