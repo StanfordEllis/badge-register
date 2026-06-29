@@ -137,3 +137,14 @@ Common areas to look for include:
 ## Configuration
 
 If the project requires environment variables, create a local environment file based on the repository conventions.
+
+Common examples include:
+
+```bash
+.env
+```
+
+or:
+
+```bash
+.env.local
